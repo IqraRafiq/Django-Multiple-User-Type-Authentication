@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Welcome to the Multiple User Type Authentication! <span class="icon-emo-happy"></span></h2>
+  <p class="lead">This Page can be accessed by all user type in their active/login state.</p>
+  <ul>
+    <li>Alpha page can be only accessible to User who have User type 1 role</li>
+    <li>Bravo page can be only accessible to User who have User type 2 role</li>
+    <li>Charli page can be only accessible to User who have User type 3 role</li>
+  </ul>
+  <div style="text-align:center">
+    <p class="lead">Try to visit pages</p>
+    <a href="{% url 'alpha' %}" class="btn btn-teacher btn-lg" role="button">Alpha</a>
+    <a href="{% url 'bravo' %}" class="btn btn-teacher btn-lg" role="button">Bravo</a>
+    <a href="{% url 'charli' %}" class="btn btn-teacher btn-lg" role="button">Charli</a>
+  </div
+  
+{% endblock %}
